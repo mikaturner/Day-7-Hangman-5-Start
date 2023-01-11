@@ -37,9 +37,11 @@ while not end_of_game:
       letter = chosen_word[position]
       if letter == guess:
         display[position] = letter
+        print(f"You guessed correctly '{letter}' is in the word")
 
     #Check if user is wrong.
     if guess not in chosen_word:
+      print(f"Your guess '{letter}' is not in the word, lose one life.")
       lives -= 1
     
     if lives == 0:
